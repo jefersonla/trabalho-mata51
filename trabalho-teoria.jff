@@ -50,7 +50,19 @@
 		</state>
 		<state id="11" name="q11">
 			<x>1703.0</x>
-			<y>733.0</y>
+			<y>744.0</y>
+		</state>
+		<state id="12" name="q12">
+			<x>1697.0</x>
+			<y>892.0</y>
+		</state>
+		<state id="13" name="q13">
+			<x>1373.0</x>
+			<y>821.0</y>
+		</state>
+		<state id="14" name="q14">
+			<x>1393.0</x>
+			<y>927.0</y>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
@@ -289,6 +301,22 @@
 			<read tape="1">-</read>
 			<write tape="1">-</write>
 			<move tape="1">L</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">S</move>
+			<read tape="4">-</read>
+			<write tape="4">-</write>
+			<move tape="4">L</move>
+		</transition>
+		<transition>
+			<from>9</from>
+			<to>10</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">R</move>
 			<read tape="2"/>
 			<write tape="2"/>
 			<move tape="2">S</move>
@@ -712,22 +740,6 @@
 			<move tape="4">R</move>
 		</transition>
 		<transition>
-			<from>9</from>
-			<to>10</to>
-			<read tape="1"/>
-			<write tape="1"/>
-			<move tape="1">S</move>
-			<read tape="2"/>
-			<write tape="2"/>
-			<move tape="2">S</move>
-			<read tape="3"/>
-			<write tape="3"/>
-			<move tape="3">S</move>
-			<read tape="4">-</read>
-			<write tape="4">-</write>
-			<move tape="4">L</move>
-		</transition>
-		<transition>
 			<from>7</from>
 			<to>7</to>
 			<controlx>1080</controlx>
@@ -744,6 +756,22 @@
 			<read tape="4">0</read>
 			<write tape="4">1</write>
 			<move tape="4">L</move>
+		</transition>
+		<transition>
+			<from>10</from>
+			<to>11</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">R</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">S</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -809,12 +837,12 @@ ao final dessa escolha. Na pasta de entrega desse projeto existem diversos casos
 
 Descrição de funcionamento:
     A principio toda entrada necessária para utilização do programa está na primeira fita, sendo as demais fitas, apenas resultados ou utilizadas para armazenamento temporário de informações
-(memória auxiliar). Descrição das fitas: (1) Fita de entrada de dados, (2) Fita com a escolha do melhor enlace, (3) Fita com a rede após a inserção e balanceamento, (4) Fita auxiliar.
+(memória auxiliar). Descrição das fitas: (1) Fita de entrada de dados, (2) Fita com a escolha do melhor enlace, (3) Fita com a rede após a inserção do novo nó, (4) Fita auxiliar.
     A fita de entrada de dados (1), tem o seguinte formato: 
 
                                                                  _&lt;enlace_en1&gt;-&lt;n_clientes_en1&gt;_&lt;enlace_en2&gt;-&lt;n_clientes_en2&gt;_..._&lt;enlace_enN&gt;-&lt;n_clientes_enN&gt;__
 
-    Todos os enlaces e número de clientes são descritos utilizando números binários, o alfabeto da linguagem é: A = {0, 1, -, _}.
+    Todos os enlaces e número de clientes são descritos utilizando números binários, o alfabeto da linguagem é: A = {0, 1, -, _}. Cada enlace é sempre representado no formato "0000-0000".
     O resultado para a escolha do melhor enlace está em binário na segunda fita. Casos de teste e explicação do formato abordado estão contidos no artigo e ao lado.</text>
 			<x>20.0</x>
 			<y>9.0</y>
@@ -974,8 +1002,8 @@ prox. enlace</text>
 		</note>
 		<note>
 			<text>Rotina 1.4: Copia menor enlace para fita auxiliar</text>
-			<x>930.0</x>
-			<y>1156.0</y>
+			<x>927.0</x>
+			<y>1152.0</y>
 		</note>
 		<note>
 			<text>Rotina 2.1: Copiar resultado para fitas resultado </text>
@@ -1017,6 +1045,12 @@ Caso 3: N enlaces com um destes possuindo 0 clientes
 0001-0001□0010-0001□0011-0000□0100-0001□0101-0001</text>
 			<x>1261.0</x>
 			<y>121.0</y>
+		</note>
+		<note>
+			<text>Encontrado
+  inicio F4</text>
+			<x>1731.0</x>
+			<y>580.0</y>
 		</note>
 	</automaton>
 </structure>
