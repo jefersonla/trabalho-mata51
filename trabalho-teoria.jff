@@ -48,6 +48,10 @@
 			<x>1703.0</x>
 			<y>453.0</y>
 		</state>
+		<state id="11" name="q11">
+			<x>1703.0</x>
+			<y>733.0</y>
+		</state>
 		<!--The list of transitions.-->
 		<transition>
 			<from>6</from>
@@ -244,8 +248,8 @@
 		<transition>
 			<from>7</from>
 			<to>7</to>
-			<controlx>1065</controlx>
-			<controly>1093</controly>
+			<controlx>1078</controlx>
+			<controly>1095</controly>
 			<read tape="1">0</read>
 			<write tape="1">0</write>
 			<move tape="1">L</move>
@@ -262,8 +266,8 @@
 		<transition>
 			<from>7</from>
 			<to>7</to>
-			<controlx>1066</controlx>
-			<controly>1156</controly>
+			<controlx>1080</controlx>
+			<controly>1155</controly>
 			<read tape="1">1</read>
 			<write tape="1">1</write>
 			<move tape="1">L</move>
@@ -280,7 +284,7 @@
 		<transition>
 			<from>7</from>
 			<to>7</to>
-			<controlx>1067</controlx>
+			<controlx>1079</controlx>
 			<controly>1218</controly>
 			<read tape="1">-</read>
 			<write tape="1">-</write>
@@ -314,7 +318,7 @@
 		<transition>
 			<from>7</from>
 			<to>7</to>
-			<controlx>1064</controlx>
+			<controlx>1078</controlx>
 			<controly>1125</controly>
 			<read tape="1">0</read>
 			<write tape="1">0</write>
@@ -726,8 +730,8 @@
 		<transition>
 			<from>7</from>
 			<to>7</to>
-			<controlx>1066</controlx>
-			<controly>1187</controly>
+			<controlx>1080</controlx>
+			<controly>1186</controly>
 			<read tape="1">1</read>
 			<write tape="1">1</write>
 			<move tape="1">L</move>
@@ -800,8 +804,8 @@
 
 Introdução:
     Esta maquina de turing demonstra o processo de escolha de melhor nó e balanceamento de uma rede MESH (ver detalhes no artigo).  Para utilização deve ser considerada a utilização de 4 fitas
-(o funcionamento de cada fita é descrito a seguir), o algoritmo executa vários passos (ou subrotinas), para escolher o melhor enlace dentre todos os enlaces, informar o resultado final da rede ao
-final dessa escolha e como bonus, balancear a rede caso seja necessário, a fim de apenas garantir que a rede já estava balanceada no inicio da execução.
+(o funcionamento de cada fita é descrito a seguir), o algoritmo executa vários passos (ou subrotinas), para escolher o melhor enlace dentre todos os enlaces e informar o resultado final da rede 
+ao final dessa escolha. Na pasta de entrega desse projeto existem diversos casos de teste que compreendem os testes unitários deste projeto e podem ser executados autonomamente no JFLAP.
 
 Descrição de funcionamento:
     A principio toda entrada necessária para utilização do programa está na primeira fita, sendo as demais fitas, apenas resultados ou utilizadas para armazenamento temporário de informações
@@ -822,7 +826,7 @@ Descrição de funcionamento:
 &lt;n_clientes_*&gt; : 4 bits representando o número de clientes no enlace, (max 15)
 F1...Fn               : Número da fita (1, 2, 3, 4)
 EN *                   : Enlace, geralmente Enlace A (Fita 4) e Enlace B (Fita 1)</text>
-			<x>1273.0</x>
+			<x>1260.0</x>
 			<y>9.0</y>
 		</note>
 		<note>
@@ -944,8 +948,8 @@ de F4 para F2 </text>
 		<note>
 			<text>  Copia o numero de clientes
 e o id do enlace de F1 para F4</text>
-			<x>983.0</x>
-			<y>1102.0</y>
+			<x>988.0</x>
+			<y>1105.0</y>
 		</note>
 		<note>
 			<text>Encontrado fim de F1 e F4</text>
@@ -970,8 +974,8 @@ prox. enlace</text>
 		</note>
 		<note>
 			<text>Rotina 1.4: Copia menor enlace para fita auxiliar</text>
-			<x>926.0</x>
-			<y>1150.0</y>
+			<x>930.0</x>
+			<y>1156.0</y>
 		</note>
 		<note>
 			<text>Rotina 2.1: Copiar resultado para fitas resultado </text>
@@ -1000,6 +1004,19 @@ inicio da fita</text>
    inicio F4</text>
 			<x>1735.0</x>
 			<y>441.0</y>
+		</note>
+		<note>
+			<text>Casos de Teste:
+    Clicar em step e inserir os dados na primeira fita.
+
+Caso 1: Um enlace com 0 clientes
+0001-0000
+Caso 2: Dois enlaces sem clientes
+0001-0000□0010-0000
+Caso 3: N enlaces com um destes possuindo 0 clientes
+0001-0001□0010-0001□0011-0000□0100-0001□0101-0001</text>
+			<x>1261.0</x>
+			<y>121.0</y>
 		</note>
 	</automaton>
 </structure>
