@@ -89,6 +89,11 @@
 			<x>1079.0</x>
 			<y>1262.0</y>
 		</state>
+		<state id="21" name="q21">
+			<x>1704.0</x>
+			<y>695.0</y>
+			<final/>
+		</state>
 		<!--The list of transitions.-->
 		<transition>
 			<from>6</from>
@@ -375,6 +380,22 @@
 			<move tape="4">S</move>
 		</transition>
 		<transition>
+			<from>9</from>
+			<to>9</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2">0</write>
+			<move tape="2">R</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">S</move>
+			<read tape="4">0</read>
+			<write tape="4">0</write>
+			<move tape="4">R</move>
+		</transition>
+		<transition>
 			<from>7</from>
 			<to>7</to>
 			<controlx>1078</controlx>
@@ -447,6 +468,22 @@
 			<move tape="4">S</move>
 		</transition>
 		<transition>
+			<from>10</from>
+			<to>21</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">S</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
 			<from>12</from>
 			<to>14</to>
 			<read tape="1">0</read>
@@ -455,12 +492,12 @@
 			<read tape="2"/>
 			<write tape="2"/>
 			<move tape="2">S</move>
-			<read tape="3"/>
-			<write tape="3"/>
+			<read tape="3">0</read>
+			<write tape="3">0</write>
 			<move tape="3">S</move>
-			<read tape="4">0</read>
-			<write tape="4">0</write>
-			<move tape="4">R</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -477,6 +514,22 @@
 			<read tape="4"/>
 			<write tape="4">-</write>
 			<move tape="4">R</move>
+		</transition>
+		<transition>
+			<from>12</from>
+			<to>15</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">L</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">L</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -513,22 +566,6 @@
 			<move tape="4">L</move>
 		</transition>
 		<transition>
-			<from>10</from>
-			<to>11</to>
-			<read tape="1"/>
-			<write tape="1"/>
-			<move tape="1">R</move>
-			<read tape="2"/>
-			<write tape="2"/>
-			<move tape="2">S</move>
-			<read tape="3"/>
-			<write tape="3"/>
-			<move tape="3">S</move>
-			<read tape="4"/>
-			<write tape="4"/>
-			<move tape="4">S</move>
-		</transition>
-		<transition>
 			<from>1</from>
 			<to>3</to>
 			<read tape="1">-</read>
@@ -542,6 +579,22 @@
 			<move tape="3">S</move>
 			<read tape="4">-</read>
 			<write tape="4">-</write>
+			<move tape="4">R</move>
+		</transition>
+		<transition>
+			<from>10</from>
+			<to>10</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">R</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">R</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">R</move>
+			<read tape="4"/>
+			<write tape="4"/>
 			<move tape="4">R</move>
 		</transition>
 		<transition>
@@ -609,38 +662,6 @@
 			<read tape="4">1</read>
 			<write tape="4">1</write>
 			<move tape="4">S</move>
-		</transition>
-		<transition>
-			<from>9</from>
-			<to>9</to>
-			<read tape="1"/>
-			<write tape="1"/>
-			<move tape="1">S</move>
-			<read tape="2">1</read>
-			<write tape="2">1</write>
-			<move tape="2">R</move>
-			<read tape="3"/>
-			<write tape="3"/>
-			<move tape="3">S</move>
-			<read tape="4">1</read>
-			<write tape="4">1</write>
-			<move tape="4">R</move>
-		</transition>
-		<transition>
-			<from>9</from>
-			<to>9</to>
-			<read tape="1"/>
-			<write tape="1"/>
-			<move tape="1">S</move>
-			<read tape="2">0</read>
-			<write tape="2">0</write>
-			<move tape="2">R</move>
-			<read tape="3"/>
-			<write tape="3"/>
-			<move tape="3">S</move>
-			<read tape="4">0</read>
-			<write tape="4">0</write>
-			<move tape="4">R</move>
 		</transition>
 		<transition>
 			<from>5</from>
@@ -1005,6 +1026,22 @@
 			<move tape="4">S</move>
 		</transition>
 		<transition>
+			<from>9</from>
+			<to>9</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2">1</write>
+			<move tape="2">R</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">S</move>
+			<read tape="4">1</read>
+			<write tape="4">1</write>
+			<move tape="4">R</move>
+		</transition>
+		<transition>
 			<from>14</from>
 			<to>14</to>
 			<controlx>1408</controlx>
@@ -1297,11 +1334,12 @@ Caso 2: Dois enlaces sem clientes
 Caso 3: N enlaces com um destes possuindo 0 clientes
 0001-0001□0010-0001□0011-0000□0100-0001□0101-0001</text>
 			<x>1261.0</x>
-			<y>121.0</y>
+			<y>120.0</y>
 		</note>
 		<note>
-			<text>Encontrado
-  inicio F4</text>
+			<text>  Encontrado
+    inicio F4
+Fim provisorio</text>
 			<x>1731.0</x>
 			<y>580.0</y>
 		</note>
@@ -1336,9 +1374,40 @@ enlaces continua a copiar</text>
 			<y>926.0</y>
 		</note>
 		<note>
-			<text>Rotina 2.2: Copiar estrutura inicial para F3</text>
-			<x>1390.0</x>
-			<y>626.0</y>
+			<text>TODO Rotina 2.2: Copiar estrutura inicial para F3</text>
+			<x>1344.0</x>
+			<y>633.0</y>
+		</note>
+		<note>
+			<text>TODO</text>
+			<x>117.0</x>
+			<y>1217.0</y>
+		</note>
+		<note>
+			<text>TODO</text>
+			<x>430.0</x>
+			<y>1221.0</y>
+		</note>
+		<note>
+			<text>TODO</text>
+			<x>741.0</x>
+			<y>1223.0</y>
+		</note>
+		<note>
+			<text>TODO</text>
+			<x>1060.0</x>
+			<y>1223.0</y>
+		</note>
+		<note>
+			<text>TODO</text>
+			<x>1383.0</x>
+			<y>1222.0</y>
+		</note>
+		<note>
+			<text>Encontrado fim
+ todos enlaces</text>
+			<x>1728.0</x>
+			<y>1112.0</y>
 		</note>
 	</automaton>
 </structure>
