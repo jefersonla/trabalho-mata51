@@ -28,15 +28,15 @@
 			<x>1079.0</x>
 			<y>745.0</y>
 		</state>
-		<state id="6" name="q6">
+		<state id="6" name="q8">
 			<x>1079.0</x>
 			<y>453.0</y>
 		</state>
-		<state id="7" name="q7">
+		<state id="7" name="q6">
 			<x>1079.0</x>
 			<y>995.0</y>
 		</state>
-		<state id="8" name="q8">
+		<state id="8" name="q7">
 			<x>135.0</x>
 			<y>995.0</y>
 		</state>
@@ -92,21 +92,37 @@
 			<x>135.0</x>
 			<y>1847.0</y>
 		</state>
-		<state id="23" name="q23">
+		<state id="22" name="q26">
+			<x>1388.0</x>
+			<y>1851.0</y>
+		</state>
+		<state id="23" name="q24">
 			<x>759.0</x>
 			<y>1847.0</y>
 		</state>
-		<state id="24" name="q24">
+		<state id="24" name="q25">
 			<x>1079.0</x>
 			<y>1847.0</y>
 		</state>
-		<state id="25" name="q25">
+		<state id="25" name="q22">
 			<x>450.0</x>
 			<y>1555.0</y>
 		</state>
-		<state id="26" name="q26">
+		<state id="26" name="q23">
 			<x>759.0</x>
 			<y>1555.0</y>
+		</state>
+		<state id="27" name="q27">
+			<x>1386.0</x>
+			<y>1555.0</y>
+		</state>
+		<state id="28" name="q28">
+			<x>1743.0</x>
+			<y>1848.0</y>
+		</state>
+		<state id="29" name="q29">
+			<x>1734.0</x>
+			<y>1552.0</y>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
@@ -1988,6 +2004,16 @@ do n. clientes F3</text>
 de n. clientes F3</text>
 			<x>870.0</x>
 			<y>1853.0</y>
+		</note>
+		<note>
+			<text>insert_text</text>
+			<x>1357.0</x>
+			<y>1890.0</y>
+		</note>
+		<note>
+			<text>insert_text</text>
+			<x>1711.0</x>
+			<y>1884.0</y>
 		</note>
 	</automaton>
 </structure>
