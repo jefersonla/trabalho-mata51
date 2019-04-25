@@ -139,10 +139,7 @@
 		<state id="33" name="q33">
 			<x>1079.0</x>
 			<y>2176.0</y>
-		</state>
-		<state id="34" name="q34">
-			<x>1832.0</x>
-			<y>2491.0</y>
+			<final/>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
@@ -158,22 +155,6 @@
 			<move tape="2">S</move>
 			<read tape="3"/>
 			<write tape="3">0</write>
-			<move tape="3">R</move>
-			<read tape="4"/>
-			<write tape="4"/>
-			<move tape="4">S</move>
-		</transition>
-		<transition>
-			<from>31</from>
-			<to>32</to>
-			<read tape="1"/>
-			<write tape="1"/>
-			<move tape="1">S</move>
-			<read tape="2"/>
-			<write tape="2"/>
-			<move tape="2">S</move>
-			<read tape="3">0</read>
-			<write tape="3">1</write>
 			<move tape="3">R</move>
 			<read tape="4"/>
 			<write tape="4"/>
@@ -592,22 +573,6 @@
 			<read tape="4"/>
 			<write tape="4"/>
 			<move tape="4">S</move>
-		</transition>
-		<transition>
-			<from>17</from>
-			<to>17</to>
-			<read tape="1"/>
-			<write tape="1"/>
-			<move tape="1">R</move>
-			<read tape="2"/>
-			<write tape="2"/>
-			<move tape="2">R</move>
-			<read tape="3"/>
-			<write tape="3"/>
-			<move tape="3">R</move>
-			<read tape="4"/>
-			<write tape="4"/>
-			<move tape="4">R</move>
 		</transition>
 		<transition>
 			<from>28</from>
@@ -1316,6 +1281,22 @@
 			<move tape="4">R</move>
 		</transition>
 		<transition>
+			<from>31</from>
+			<to>32</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3">-</read>
+			<write tape="3">1</write>
+			<move tape="3">R</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
 			<from>17</from>
 			<to>19</to>
 			<read tape="1"/>
@@ -1393,6 +1374,22 @@
 			<read tape="3">-</read>
 			<write tape="3">-</write>
 			<move tape="3">R</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
+			<from>30</from>
+			<to>31</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3">-</read>
+			<write tape="3">-</write>
+			<move tape="3">S</move>
 			<read tape="4"/>
 			<write tape="4"/>
 			<move tape="4">S</move>
@@ -1842,22 +1839,6 @@
 			<move tape="4">S</move>
 		</transition>
 		<transition>
-			<from>30</from>
-			<to>31</to>
-			<read tape="1"/>
-			<write tape="1"/>
-			<move tape="1">S</move>
-			<read tape="2"/>
-			<write tape="2"/>
-			<move tape="2">S</move>
-			<read tape="3">-</read>
-			<write tape="3">-</write>
-			<move tape="3">L</move>
-			<read tape="4"/>
-			<write tape="4"/>
-			<move tape="4">S</move>
-		</transition>
-		<transition>
 			<from>14</from>
 			<to>14</to>
 			<controlx>1411</controlx>
@@ -1943,7 +1924,7 @@
 			<text>Passo 1: 
     Procura o enlace com o menor numero de clientes</text>
 			<x>24.0</x>
-			<y>282.0</y>
+			<y>281.0</y>
 		</note>
 		<note>
 			<text>TRABALHO MATA 51 - Teoria da Computação
@@ -1972,178 +1953,178 @@ Descrição de funcionamento:
 &lt;n_clientes_*&gt; : 4 bits representando o número de clientes no enlace, (max 15)
 F1...Fn               : Número da fita (1, 2, 3, 4)
 EN *                   : Enlace, geralmente Enlace A (Fita 4) e Enlace B (Fita 1)</text>
-			<x>1260.0</x>
+			<x>1254.0</x>
 			<y>9.0</y>
 		</note>
 		<note>
 			<text>Rotina 1.1: Copiar para a fita auxiliar o primeiro valor</text>
 			<x>25.0</x>
-			<y>331.0</y>
+			<y>329.0</y>
 		</note>
 		<note>
 			<text>Copia o primeiro
 enlace para o aux</text>
 			<x>87.0</x>
-			<y>478.0</y>
+			<y>476.0</y>
 		</note>
 		<note>
 			<text> Encontrou
 prox enlace</text>
-			<x>262.0</x>
-			<y>456.0</y>
+			<x>261.0</x>
+			<y>454.0</y>
 		</note>
 		<note>
 			<text>F4(EN A) &gt; F1(EN B) </text>
-			<x>857.0</x>
-			<y>750.0</y>
+			<x>853.0</x>
+			<y>747.0</y>
 		</note>
 		<note>
 			<text> Move F4 até 
 num. clientes</text>
-			<x>414.0</x>
-			<y>341.0</y>
-		</note>
-		<note>
-			<text>  Encontrou inicio
-numero clientes F4</text>
-			<x>549.0</x>
-			<y>459.0</y>
-		</note>
-		<note>
-			<text>Procura n clientes
-  proximo enlace</text>
-			<x>712.0</x>
+			<x>412.0</x>
 			<y>339.0</y>
 		</note>
 		<note>
 			<text>  Encontrou inicio
+numero clientes F4</text>
+			<x>547.0</x>
+			<y>457.0</y>
+		</note>
+		<note>
+			<text>Procura n clientes
+  proximo enlace</text>
+			<x>709.0</x>
+			<y>337.0</y>
+		</note>
+		<note>
+			<text>  Encontrou inicio
 numero clientes F1</text>
-			<x>792.0</x>
-			<y>580.0</y>
+			<x>788.0</x>
+			<y>577.0</y>
 		</note>
 		<note>
 			<text> Compara enlaces
 F4(EN A) ? F1(EN B)</text>
-			<x>705.0</x>
-			<y>808.0</y>
+			<x>702.0</x>
+			<y>804.0</y>
 		</note>
 		<note>
 			<text>  F4(EN A) = F1(EN B)
 Move para prox enlace</text>
-			<x>607.0</x>
-			<y>581.0</y>
+			<x>604.0</x>
+			<y>578.0</y>
 		</note>
 		<note>
 			<text>F4(EN A) &lt; F1(EN B)</text>
-			<x>547.0</x>
-			<y>727.0</y>
+			<x>545.0</x>
+			<y>724.0</y>
 		</note>
 		<note>
 			<text>Rotina 1.2: Comparar o primeiro enlace com os outros</text>
-			<x>601.0</x>
-			<y>314.0</y>
+			<x>598.0</x>
+			<y>313.0</y>
 		</note>
 		<note>
 			<text>Não encontrou 
 proximo enlace</text>
-			<x>877.0</x>
-			<y>458.0</y>
+			<x>873.0</x>
+			<y>456.0</y>
 		</note>
 		<note>
 			<text>Passo 2:
     Encontrado o enlace com o menor número de clientes copia o enlace para F2</text>
-			<x>955.0</x>
-			<y>299.0</y>
+			<x>951.0</x>
+			<y>298.0</y>
 		</note>
 		<note>
 			<text> Move para
 prox. enlace</text>
-			<x>462.0</x>
-			<y>583.0</y>
+			<x>460.0</x>
+			<y>580.0</y>
 		</note>
 		<note>
 			<text>    Mantem o enlace atual
 com num menor de clientes</text>
-			<x>370.0</x>
-			<y>842.0</y>
+			<x>368.0</x>
+			<y>838.0</y>
 		</note>
 		<note>
 			<text>  Encontrado enlace com
 numero menor de clientes</text>
-			<x>1107.0</x>
-			<y>725.0</y>
+			<x>1102.0</x>
+			<y>722.0</y>
 		</note>
 		<note>
 			<text>Percorre até o fim
  do num. clientes</text>
-			<x>1021.0</x>
-			<y>612.0</y>
+			<x>1016.0</x>
+			<y>609.0</y>
 		</note>
 		<note>
 			<text>Encontrado fim
 do enlace F1/F4</text>
-			<x>1105.0</x>
-			<y>851.0</y>
+			<x>1100.0</x>
+			<y>847.0</y>
 		</note>
 		<note>
 			<text>  Copia o numero de clientes
 e o id do enlace de F1 para F4</text>
-			<x>988.0</x>
-			<y>1105.0</y>
+			<x>984.0</x>
+			<y>1100.0</y>
 		</note>
 		<note>
 			<text>Encontrado fim de F1 e F4</text>
-			<x>514.0</x>
-			<y>978.0</y>
+			<x>512.0</x>
+			<y>974.0</y>
 		</note>
 		<note>
 			<text>Percorre até o final de F1 e F4</text>
 			<x>38.0</x>
-			<y>1067.0</y>
+			<y>1062.0</y>
 		</note>
 		<note>
 			<text>  Move para
 prox. enlace</text>
-			<x>192.0</x>
-			<y>686.0</y>
+			<x>191.0</x>
+			<y>683.0</y>
 		</note>
 		<note>
 			<text>Rotina 1.3: Resultado da comparação</text>
-			<x>645.0</x>
-			<y>885.0</y>
+			<x>642.0</x>
+			<y>881.0</y>
 		</note>
 		<note>
 			<text>Rotina 1.4: Copia menor enlace para fita auxiliar</text>
-			<x>927.0</x>
-			<y>1152.0</y>
+			<x>923.0</x>
+			<y>1147.0</y>
 		</note>
 		<note>
 			<text>Rotina 2.1: Copiar resultado para fita resultado </text>
-			<x>956.0</x>
-			<y>347.0</y>
+			<x>952.0</x>
+			<y>345.0</y>
 		</note>
 		<note>
 			<text>Percorre F4 até inicio</text>
-			<x>1015.0</x>
-			<y>482.0</y>
+			<x>1010.0</x>
+			<y>480.0</y>
 		</note>
 		<note>
 			<text>  Encontrou
 inicio da fita</text>
-			<x>1198.0</x>
-			<y>459.0</y>
+			<x>1193.0</x>
+			<y>457.0</y>
 		</note>
 		<note>
 			<text>Encontrou fim
  do id enlace</text>
-			<x>1518.0</x>
-			<y>459.0</y>
+			<x>1511.0</x>
+			<y>457.0</y>
 		</note>
 		<note>
 			<text>Retorna para
    inicio F4</text>
-			<x>1735.0</x>
-			<y>441.0</y>
+			<x>1727.0</x>
+			<y>439.0</y>
 		</note>
 		<note>
 			<text>Casos de Teste:
@@ -2155,262 +2136,262 @@ Caso 2: Dois enlaces sem clientes
 0001-0000□0010-0000
 Caso 3: N enlaces com um destes possuindo 0 clientes
 0001-0001□0010-0001□0011-0000□0100-0001□0101-0001                              </text>
-			<x>1261.0</x>
-			<y>114.0</y>
+			<x>1255.0</x>
+			<y>113.0</y>
 		</note>
 		<note>
 			<text>  Encontrado
     inicio F4    </text>
-			<x>1731.0</x>
-			<y>580.0</y>
+			<x>1723.0</x>
+			<y>577.0</y>
 		</note>
 		<note>
 			<text>   Percorre ate 
 inicio do enlace</text>
-			<x>1735.0</x>
-			<y>731.0</y>
+			<x>1727.0</x>
+			<y>728.0</y>
 		</note>
 		<note>
 			<text>Caso nao seja o ultimo
   continua a percorrer</text>
-			<x>1488.0</x>
-			<y>663.0</y>
+			<x>1481.0</x>
+			<y>660.0</y>
 		</note>
 		<note>
 			<text>   Encontrado
 primeiro enlace</text>
-			<x>1436.0</x>
-			<y>850.0</y>
+			<x>1429.0</x>
+			<y>846.0</y>
 		</note>
 		<note>
 			<text>Copia um enlace
      para saida</text>
-			<x>1356.0</x>
-			<y>1092.0</y>
+			<x>1350.0</x>
+			<y>1087.0</y>
 		</note>
 		<note>
 			<text>    Caso ainda existam
 enlaces continua a copiar</text>
-			<x>1472.0</x>
-			<y>926.0</y>
+			<x>1465.0</x>
+			<y>922.0</y>
 		</note>
 		<note>
 			<text>Ir para início F3</text>
-			<x>151.0</x>
-			<y>1544.0</y>
+			<x>150.0</x>
+			<y>1537.0</y>
 		</note>
 		<note>
 			<text>Encontrado início F2</text>
-			<x>230.0</x>
-			<y>1244.0</y>
+			<x>229.0</x>
+			<y>1238.0</y>
 		</note>
 		<note>
 			<text>Retorna até
 início de F2</text>
-			<x>415.0</x>
-			<y>1150.0</y>
+			<x>413.0</x>
+			<y>1145.0</y>
 		</note>
 		<note>
 			<text>Encontrado inicio F3</text>
-			<x>858.0</x>
-			<y>1244.0</y>
+			<x>854.0</x>
+			<y>1238.0</y>
 		</note>
 		<note>
 			<text>Retorna inicio F3</text>
-			<x>1358.0</x>
-			<y>1298.0</y>
+			<x>1352.0</x>
+			<y>1292.0</y>
 		</note>
 		<note>
 			<text>Encontrado fim
  todos enlaces</text>
-			<x>1728.0</x>
-			<y>1112.0</y>
+			<x>1720.0</x>
+			<y>1107.0</y>
 		</note>
 		<note>
 			<text>Retorna fim do
  ultimo enlace</text>
-			<x>1507.0</x>
-			<y>1229.0</y>
+			<x>1500.0</x>
+			<y>1223.0</y>
 		</note>
 		<note>
 			<text>Verifica se nao existe
     proximo enlace</text>
-			<x>1180.0</x>
-			<y>1299.0</y>
+			<x>1175.0</x>
+			<y>1293.0</y>
 		</note>
 		<note>
 			<text>Rotina 3.1: Copia F1 para F3</text>
-			<x>1355.0</x>
-			<y>629.0</y>
+			<x>1349.0</x>
+			<y>626.0</y>
 		</note>
 		<note>
 			<text>Passo 3:
     Exibe resultado com novo cliente em posição otima</text>
-			<x>1355.0</x>
-			<y>583.0</y>
+			<x>1349.0</x>
+			<y>580.0</y>
 		</note>
 		<note>
 			<text>Rotina 3.2: Procura pelo ID do melhor enlace</text>
-			<x>481.0</x>
-			<y>1122.0</y>
+			<x>479.0</x>
+			<y>1117.0</y>
 		</note>
 		<note>
 			<text>Ir para fim de F2</text>
-			<x>553.0</x>
-			<y>1246.0</y>
+			<x>550.0</x>
+			<y>1240.0</y>
 		</note>
 		<note>
 			<text>Continua enquanto F2 (EN A) = F3 (EN B)</text>
 			<x>6.0</x>
-			<y>1905.0</y>
+			<y>1896.0</y>
 		</note>
 		<note>
 			<text>F2 (EN A) != F3 (EN B)</text>
-			<x>298.0</x>
-			<y>1695.0</y>
+			<x>297.0</x>
+			<y>1687.0</y>
 		</note>
 		<note>
 			<text>F2 (EN A) = F3 (EN B)</text>
-			<x>381.0</x>
-			<y>1854.0</y>
+			<x>379.0</x>
+			<y>1846.0</y>
 		</note>
 		<note>
 			<text>  Percorre até o fim 
  de ID enlace F2 F3</text>
-			<x>391.0</x>
-			<y>1415.0</y>
+			<x>389.0</x>
+			<y>1409.0</y>
 		</note>
 		<note>
 			<text> Encontrado 
 fim de F2 F3</text>
-			<x>563.0</x>
-			<y>1560.0</y>
+			<x>560.0</x>
+			<y>1553.0</y>
 		</note>
 		<note>
 			<text>Percorre até o fim
  de n. clientes F3</text>
-			<x>709.0</x>
-			<y>1623.0</y>
+			<x>706.0</x>
+			<y>1616.0</y>
 		</note>
 		<note>
 			<text>Encontrado fim
   n. clientes F3</text>
-			<x>768.0</x>
-			<y>1392.0</y>
+			<x>765.0</x>
+			<y>1386.0</y>
 		</note>
 		<note>
 			<text>Passo 4:
     Encontrado o ID do melhor enlace, incrementa o número de clientes</text>
-			<x>632.0</x>
-			<y>1684.0</y>
+			<x>629.0</x>
+			<y>1676.0</y>
 		</note>
 		<note>
 			<text>Rotina 4.1: Incrementa o número de clientes do enlace atual</text>
-			<x>632.0</x>
-			<y>1731.0</y>
+			<x>629.0</x>
+			<y>1723.0</y>
 		</note>
 		<note>
 			<text>    Copia ID melhor
 enlace de F4 para F2</text>
-			<x>1344.0</x>
-			<y>479.0</y>
+			<x>1338.0</x>
+			<y>477.0</y>
 		</note>
 		<note>
 			<text>Percorre até fim
 do n. clientes F3</text>
-			<x>710.0</x>
-			<y>1874.0</y>
+			<x>707.0</x>
+			<y>1865.0</y>
 		</note>
 		<note>
 			<text> Encontrado fim
 de n. clientes F3</text>
-			<x>870.0</x>
-			<y>1853.0</y>
+			<x>866.0</x>
+			<y>1845.0</y>
 		</note>
 		<note>
 			<text> Encontrado posicao
 livre para incremento</text>
-			<x>1179.0</x>
-			<y>1849.0</y>
+			<x>1174.0</x>
+			<y>1841.0</y>
 		</note>
 		<note>
 			<text>      Percorre até
 encontrar num troca</text>
-			<x>1014.0</x>
-			<y>1443.0</y>
+			<x>1009.0</x>
+			<y>1436.0</y>
 		</note>
 		<note>
 			<text>Percorre até
 encontrar 0</text>
-			<x>1046.0</x>
-			<y>1904.0</y>
+			<x>1041.0</x>
+			<y>1895.0</y>
 		</note>
 		<note>
 			<text>Encontrado
 inc. simples</text>
-			<x>1423.0</x>
-			<y>1996.0</y>
+			<x>1417.0</x>
+			<y>1987.0</y>
 		</note>
 		<note>
 			<text> Percorre até fim
    do n. clientes
 Inc. se necessário</text>
-			<x>1355.0</x>
-			<y>2260.0</y>
+			<x>1349.0</x>
+			<y>2250.0</y>
 		</note>
 		<note>
 			<text>Encontrado
 inc. compl.</text>
-			<x>1256.0</x>
-			<y>1672.0</y>
+			<x>1250.0</x>
+			<y>1664.0</y>
 		</note>
 		<note>
 			<text>Encontrado
  num troca</text>
-			<x>1211.0</x>
-			<y>1558.0</y>
+			<x>1205.0</x>
+			<y>1551.0</y>
 		</note>
 		<note>
 			<text>Encontrado
     caso: 0</text>
-			<x>1568.0</x>
-			<y>1835.0</y>
+			<x>1561.0</x>
+			<y>1827.0</y>
 		</note>
 		<note>
 			<text>Det. incremento
       recursivo</text>
-			<x>1522.0</x>
-			<y>1559.0</y>
+			<x>1515.0</x>
+			<y>1552.0</y>
 		</note>
 		<note>
 			<text> Retorna para valor
 antes do marcador</text>
-			<x>1721.0</x>
-			<y>1692.0</y>
+			<x>1713.0</x>
+			<y>1684.0</y>
 		</note>
 		<note>
 			<text>Fim do n
  clientes </text>
-			<x>1529.0</x>
-			<y>2145.0</y>
+			<x>1522.0</x>
+			<y>2135.0</y>
 		</note>
 		<note>
 			<text>Insere 1 antes
  do marcador</text>
-			<x>1721.0</x>
-			<y>1999.0</y>
+			<x>1713.0</x>
+			<y>1990.0</y>
 		</note>
 		<note>
 			<text>Inverte todos
    1's por 0</text>
-			<x>1665.0</x>
-			<y>2226.0</y>
+			<x>1657.0</x>
+			<y>2216.0</y>
 		</note>
 		<note>
 			<text>Fim do n
  clientes</text>
-			<x>1213.0</x>
-			<y>2143.0</y>
+			<x>1207.0</x>
+			<y>2133.0</y>
 		</note>
 	</automaton>
 </structure>
