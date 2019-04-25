@@ -26,7 +26,7 @@
 		</state>
 		<state id="5" name="q5">
 			<x>1079.0</x>
-			<y>744.0</y>
+			<y>745.0</y>
 		</state>
 		<state id="6" name="q6">
 			<x>1079.0</x>
@@ -97,8 +97,8 @@
 			<y>1847.0</y>
 		</state>
 		<state id="24" name="q24">
-			<x>771.0</x>
-			<y>2102.0</y>
+			<x>1079.0</x>
+			<y>1847.0</y>
 		</state>
 		<state id="25" name="q25">
 			<x>450.0</x>
@@ -187,6 +187,22 @@
 			<read tape="3"/>
 			<write tape="3"/>
 			<move tape="3">S</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
+			<from>23</from>
+			<to>24</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">L</move>
 			<read tape="4"/>
 			<write tape="4"/>
 			<move tape="4">S</move>
@@ -462,6 +478,38 @@
 			<move tape="4">S</move>
 		</transition>
 		<transition>
+			<from>23</from>
+			<to>23</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3">0</read>
+			<write tape="3">0</write>
+			<move tape="3">R</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
+			<from>23</from>
+			<to>23</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3">1</read>
+			<write tape="3">1</write>
+			<move tape="3">R</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
 			<from>17</from>
 			<to>26</to>
 			<read tape="1"/>
@@ -716,6 +764,22 @@
 			<read tape="4"/>
 			<write tape="4"/>
 			<move tape="4">L</move>
+		</transition>
+		<transition>
+			<from>17</from>
+			<to>17</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">R</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">R</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">R</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">R</move>
 		</transition>
 		<transition>
 			<from>9</from>
@@ -1650,8 +1714,8 @@ proximo enlace</text>
 		<note>
 			<text>Passo 2:
     Encontrado o enlace com o menor número de clientes copia o enlace para F2</text>
-			<x>969.0</x>
-			<y>295.0</y>
+			<x>955.0</x>
+			<y>299.0</y>
 		</note>
 		<note>
 			<text> Move para
@@ -1716,9 +1780,9 @@ prox. enlace</text>
 			<y>1152.0</y>
 		</note>
 		<note>
-			<text>Rotina 2.1: Copiar resultado para fitas resultado </text>
-			<x>970.0</x>
-			<y>348.0</y>
+			<text>Rotina 2.1: Copiar resultado para fita resultado </text>
+			<x>956.0</x>
+			<y>347.0</y>
 		</note>
 		<note>
 			<text>Percorre F4 até inicio</text>
@@ -1754,7 +1818,7 @@ Caso 2: Dois enlaces sem clientes
 Caso 3: N enlaces com um destes possuindo 0 clientes
 0001-0001□0010-0001□0011-0000□0100-0001□0101-0001</text>
 			<x>1261.0</x>
-			<y>120.0</y>
+			<y>114.0</y>
 		</note>
 		<note>
 			<text>  Encontrado
@@ -1898,14 +1962,32 @@ fim de F2 F3</text>
 		</note>
 		<note>
 			<text>Passo 4:
-    Encontrado o ID do melhor enlace, incrementa em uma unidade o número de clientes deste</text>
-			<x>730.0</x>
-			<y>1695.0</y>
+    Encontrado o ID do melhor enlace, incrementa o número de clientes</text>
+			<x>632.0</x>
+			<y>1684.0</y>
 		</note>
 		<note>
 			<text>Rotina 4.1: Incrementa o número de clientes do enlace atual</text>
-			<x>731.0</x>
-			<y>1735.0</y>
+			<x>632.0</x>
+			<y>1731.0</y>
+		</note>
+		<note>
+			<text>    Copia ID melhor
+enlace de F4 para F2</text>
+			<x>1344.0</x>
+			<y>479.0</y>
+		</note>
+		<note>
+			<text>Percorre até fim
+do n. clientes F3</text>
+			<x>710.0</x>
+			<y>1874.0</y>
+		</note>
+		<note>
+			<text> Encontrado fim
+de n. clientes F3</text>
+			<x>870.0</x>
+			<y>1853.0</y>
 		</note>
 	</automaton>
 </structure>
