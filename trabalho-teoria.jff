@@ -137,8 +137,12 @@
 			<y>2176.0</y>
 		</state>
 		<state id="33" name="q33">
-			<x>1831.0</x>
-			<y>2490.0</y>
+			<x>1079.0</x>
+			<y>2176.0</y>
+		</state>
+		<state id="34" name="q34">
+			<x>1832.0</x>
+			<y>2491.0</y>
 		</state>
 		<!--The list of transitions.-->
 		<transition>
@@ -667,6 +671,22 @@
 			<read tape="3">0</read>
 			<write tape="3">-</write>
 			<move tape="3">L</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
+			<from>29</from>
+			<to>33</to>
+			<read tape="1"/>
+			<write tape="1"/>
+			<move tape="1">S</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3"/>
+			<write tape="3"/>
+			<move tape="3">S</move>
 			<read tape="4"/>
 			<write tape="4"/>
 			<move tape="4">S</move>
@@ -2379,6 +2399,18 @@ antes do marcador</text>
  do marcador</text>
 			<x>1721.0</x>
 			<y>1999.0</y>
+		</note>
+		<note>
+			<text>Inverte todos
+   1's por 0</text>
+			<x>1665.0</x>
+			<y>2226.0</y>
+		</note>
+		<note>
+			<text>Fim do n
+ clientes</text>
+			<x>1213.0</x>
+			<y>2143.0</y>
 		</note>
 	</automaton>
 </structure>
