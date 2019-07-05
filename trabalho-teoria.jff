@@ -97,8 +97,8 @@
 			<y>1847.0</y>
 		</state>
 		<state id="23" name="q24">
-			<x>735.0</x>
-			<y>1847.0</y>
+			<x>763.0</x>
+			<y>1848.0</y>
 		</state>
 		<state id="24" name="q25">
 			<x>1079.0</x>
@@ -201,8 +201,8 @@
 			<y>3414.0</y>
 		</state>
 		<state id="49" name="q49">
-			<x>135.0</x>
-			<y>3402.0</y>
+			<x>127.0</x>
+			<y>3416.0</y>
 		</state>
 		<state id="50" name="q50">
 			<x>443.0</x>
@@ -1850,8 +1850,8 @@
 		<transition>
 			<from>34</from>
 			<to>34</to>
-			<controlx>746</controlx>
-			<controly>1821</controly>
+			<controlx>743</controlx>
+			<controly>1997</controly>
 			<read tape="1">0</read>
 			<write tape="1">0</write>
 			<move tape="1">L</move>
@@ -1904,8 +1904,8 @@
 		<transition>
 			<from>34</from>
 			<to>34</to>
-			<controlx>746</controlx>
-			<controly>1795</controly>
+			<controlx>743</controlx>
+			<controly>1969</controly>
 			<read tape="1">1</read>
 			<write tape="1">1</write>
 			<move tape="1">L</move>
@@ -1922,8 +1922,8 @@
 		<transition>
 			<from>34</from>
 			<to>34</to>
-			<controlx>752</controlx>
-			<controly>1849</controly>
+			<controlx>750</controlx>
+			<controly>1829</controly>
 			<read tape="1">-</read>
 			<write tape="1">-</write>
 			<move tape="1">L</move>
@@ -2960,26 +2960,8 @@
 		<transition>
 			<from>34</from>
 			<to>34</to>
-			<controlx>751</controlx>
-			<controly>1988</controly>
-			<read tape="1">0</read>
-			<write tape="1">0</write>
-			<move tape="1">L</move>
-			<read tape="2"/>
-			<write tape="2"/>
-			<move tape="2">S</move>
-			<read tape="3">0</read>
-			<write tape="3">0</write>
-			<move tape="3">L</move>
-			<read tape="4"/>
-			<write tape="4"/>
-			<move tape="4">S</move>
-		</transition>
-		<transition>
-			<from>34</from>
-			<to>34</to>
-			<controlx>751</controlx>
-			<controly>1959</controly>
+			<controlx>737</controlx>
+			<controly>1916</controly>
 			<read tape="1">0</read>
 			<write tape="1">0</write>
 			<move tape="1">L</move>
@@ -2996,8 +2978,8 @@
 		<transition>
 			<from>34</from>
 			<to>34</to>
-			<controlx>751</controlx>
-			<controly>1907</controly>
+			<controlx>737</controlx>
+			<controly>1857</controly>
 			<read tape="1">1</read>
 			<write tape="1">1</write>
 			<move tape="1">L</move>
@@ -3014,8 +2996,8 @@
 		<transition>
 			<from>34</from>
 			<to>34</to>
-			<controlx>751</controlx>
-			<controly>1933</controly>
+			<controlx>736</controlx>
+			<controly>1886</controly>
 			<read tape="1">1</read>
 			<write tape="1">1</write>
 			<move tape="1">L</move>
@@ -3032,8 +3014,8 @@
 		<transition>
 			<from>34</from>
 			<to>34</to>
-			<controlx>747</controlx>
-			<controly>1877</controly>
+			<controlx>737</controlx>
+			<controly>1801</controly>
 			<read tape="1">-</read>
 			<write tape="1">-</write>
 			<move tape="1">L</move>
@@ -3042,6 +3024,24 @@
 			<move tape="2">S</move>
 			<read tape="3">-</read>
 			<write tape="3">-</write>
+			<move tape="3">L</move>
+			<read tape="4"/>
+			<write tape="4"/>
+			<move tape="4">S</move>
+		</transition>
+		<transition>
+			<from>34</from>
+			<to>34</to>
+			<controlx>736</controlx>
+			<controly>1944</controly>
+			<read tape="1">0</read>
+			<write tape="1">0</write>
+			<move tape="1">L</move>
+			<read tape="2"/>
+			<write tape="2"/>
+			<move tape="2">S</move>
+			<read tape="3">0</read>
+			<write tape="3">0</write>
 			<move tape="3">L</move>
 			<read tape="4"/>
 			<write tape="4"/>
@@ -3407,13 +3407,13 @@ início de F2</text>
 		<note>
 			<text> Encontrado 
 fim de F2 F3</text>
-			<x>572.0</x>
+			<x>575.0</x>
 			<y>1557.0</y>
 		</note>
 		<note>
 			<text>Percorre até o fim
  de n. clientes F3</text>
-			<x>731.0</x>
+			<x>717.0</x>
 			<y>1620.0</y>
 		</note>
 		<note>
@@ -3431,7 +3431,7 @@ fim de F2 F3</text>
 		<note>
 			<text>Rotina 4.1: Incrementa o número de clientes do enlace atual</text>
 			<x>594.0</x>
-			<y>1729.0</y>
+			<y>1731.0</y>
 		</note>
 		<note>
 			<text>    Copia ID melhor
@@ -3442,13 +3442,13 @@ enlace de F4 para F2</text>
 		<note>
 			<text>Percorre até fim
 do n. clientes F3</text>
-			<x>698.0</x>
-			<y>1870.0</y>
+			<x>855.0</x>
+			<y>1919.0</y>
 		</note>
 		<note>
 			<text> Encontrado fim
 de n. clientes F3</text>
-			<x>867.0</x>
+			<x>880.0</x>
 			<y>1849.0</y>
 		</note>
 		<note>
@@ -3526,7 +3526,7 @@ no marcador</text>
 		<note>
 			<text>Fim do n clientes
   Ir para inicio F4 </text>
-			<x>1214.0</x>
+			<x>1199.0</x>
 			<y>2133.0</y>
 		</note>
 		<note>
@@ -3579,8 +3579,8 @@ n clientes em F1 F3</text>
 		<note>
 			<text>Caminha por
    1 enlace</text>
-			<x>711.0</x>
-			<y>1921.0</y>
+			<x>791.0</x>
+			<y>1865.0</y>
 		</note>
 		<note>
 			<text> Colocar marcadores
@@ -3677,7 +3677,7 @@ encontrado</text>
 		</note>
 		<note>
 			<text>Move F2 para fim
-   num enlaces</text>
+    ID_MAX (F2)</text>
 			<x>887.0</x>
 			<y>2799.0</y>
 		</note>
